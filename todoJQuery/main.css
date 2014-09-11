@@ -1,0 +1,23 @@
+/********************
+          General Style
+          ********************/
+
+body {
+    background-color: teal;
+    font-family: Verdana, Arial;
+    color: white;
+    max-width: 940px;
+    margin: 0 auto;
+}
+
+textarea {
+    display: block;
+    margin-bottom: 10px;
+}
+
+.todo {
+    margin: 30px 0 30px 0;
+    padding: 20px 0 20px 0;
+    border-style: solid;
+    border-color: lightgray;
+}
