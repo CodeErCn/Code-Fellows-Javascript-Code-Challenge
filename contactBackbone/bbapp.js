@@ -146,12 +146,16 @@ App.Views.AddContact = Backbone.View.extend({
         e.preventDefault();
 
         //var email validation by using regular expression
-        //var testEmail = /^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,4}$/; ** not able to get it functional
+        var testEmail = new RegExp('@');
+        //console.log(testEmail);
+        //console.log(typeof(testEmail));
 
         //gets the first name, last name, and email from html input field
         var newContactFirstName = $(e.currentTarget).find('input[class=firstName]').val();
         var newContactLastName = $(e.currentTarget).find('input[class=lastName]').val();
         var newContactEmail = $(e.currentTarget).find('input[class=email]').val();
+
+        console.log(testEmail.test(newContactEmail));
 
         //input validate for adding new contact
         if(!newContactFirstName || !newContactLastName || ! newContactEmail) {
@@ -159,17 +163,20 @@ App.Views.AddContact = Backbone.View.extend({
             alert("Sorry! * sections are required to submit");
 
         } 
-        // else if (testEmail.test(newContactEmail))
-        else {
+        else if (testEmail.test(newContactEmail)) {
 
-            //assigns the new values to the new person model
+            //assigns the new values to the new contact model
             var contact = new App.Models.Contact({ firstName: newContactFirstName, lastName: newContactLastName, email: newContactEmail });
             
             //adds this new contact to the list of contacts to be displayed
             this.collection.add(contact);
             
         } 
-        // else
+        else {
+
+            alert("Sorry! Invalid email address input");
+
+        }
     }
 });
 
