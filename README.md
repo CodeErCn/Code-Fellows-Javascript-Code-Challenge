@@ -1,0 +1,1 @@
+This Repository is for Code Fellows - Javascript code challenge for applying Javascript Dev Accelerator course. 
