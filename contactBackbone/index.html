@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>Code Follows Javascript code Challenge</title>
+</head>
+<body>
+    <h2> Contact List - Code Fellows JavaScript code challenge </h2>
+    
+    <form id="addContact" >
+        <input type="text" class="firstName" placeholder="First Name">*<br>
+        <input type="text" class="lastName"placeholder="Last Name">*<br>
+        <input type="text" class="email" placeholder="Email">*<br>
+        <input type="submit" value="Add Contact"><br>
+    </form>
+
+    <script id="indexTemplate" type="text/template">
+        <p>First Name: <strong><%=firstName%></strong> - Last Name: <strong><%=lastName%></strong> - Email: <em><%=email%></em></p>
+        <button id="editFirstName">Edit First Name</button> - <button id="editLastName">Edit Last Name</button> - <button id="editemail">Edit Email</button> | <button id="destroy">Delete Contact</button>
+    </script>
+
+    <script src="http://cdnjs.cloudflare.com/ajax/libs/underscore.js/1.6.0/underscore-min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+    <script src="http://cdnjs.cloudflare.com/ajax/libs/backbone.js/1.1.2/backbone-min.js"></script>
+    <script src="bbapp.js"></script>
+</body>
+</html>
+
